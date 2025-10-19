@@ -2,7 +2,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import { Link, useNavigate } from "react-router-dom";
-import { useCart } from "../context/CartProvider";
+import { useCart } from "../context/CartContext";
 import convertedAmount from "../utils/convert";
 
 const NavMenu = () => {

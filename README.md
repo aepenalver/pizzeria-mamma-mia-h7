@@ -1,6 +1,6 @@
 # Pizzería Mamma Mia!
 
-Hito 6 de proyecto desarrollado para mostrar conocimientos de desarrollo con React.
+Hito 7 de proyecto desarrollado para mostrar conocimientos de desarrollo con React.
 
 ## Tecnologías Empleadas
 

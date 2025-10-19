@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { useCart } from "../context/CartProvider";
+import { useCart } from "../context/CartContext";
 import convertedAmount from "../utils/convert";
 
 const CardPizza = (props) => {

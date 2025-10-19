@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import NavMenu from "../components/Navbar";
 import PizzaDetails from "../components/PizzaDetails";
-import { useAPI } from "../context/ApiProvider";
+import { useAPI } from "../context/ApiContext";
 
 const Pizza = () => {
   // Estado local para la pizza específica que se va a mostrar

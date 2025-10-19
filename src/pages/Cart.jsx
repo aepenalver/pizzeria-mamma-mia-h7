@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import NavMenu from "../components/Navbar";
-import { useCart } from "../context/CartProvider";
+import { useCart } from "../context/CartContext";
 import convertedAmount from "../utils/convert";
 
 const Cart = () => {

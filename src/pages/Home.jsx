@@ -1,7 +1,7 @@
 import CardPizza from "../components/CardPizza";
 import Header from "../components/Header";
 import NavMenu from "../components/Navbar";
-import { useAPI } from "../context/ApiProvider";
+import { useAPI } from "../context/ApiContext";
 
 const Home = () => {
   const { pizzas } = useAPI();

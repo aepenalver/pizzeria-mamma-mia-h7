@@ -9,7 +9,7 @@ export const useCart = () => {
 };
 
 // Componente Proveedor
-export const CartProvider = ({ children }) => {
+const CartProvider = ({ children }) => {
   // Estado del carrito
   const [pizzas, setPizzas] = useState([]);
 
@@ -63,4 +63,4 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-// export default CartProvider;
+export default CartProvider;
