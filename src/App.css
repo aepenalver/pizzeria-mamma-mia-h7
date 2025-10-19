@@ -1,0 +1,49 @@
+.header {
+  background-image: url(./assets/img/Header.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 25vh;
+}
+
+.header .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+
+.card-img {
+  height: 350px;
+}
+
+.box-msg {
+  height: 0.8em;
+}
+
+.msg {
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 500px;
+}
+
+.error {
+  background-color: red;
+}
+
+.success {
+  background-color: green;
+}
+
+.container-cart {
+  width: 40em;
+}
+
+.img-cart {
+  width: 4em;
+}
+
+
+.li-ingredients {
+  list-style: none;
+}
