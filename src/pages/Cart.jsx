@@ -7,9 +7,12 @@ import Row from "react-bootstrap/Row";
 import NavMenu from "../components/Navbar";
 import { useCart } from "../context/CartContext";
 import convertedAmount from "../utils/convert";
+import { useUser } from "../context/UserContext";
 
 const Cart = () => {
   const { pizzas, total, updateQty } = useCart();
+
+  const { token } = useUser();
 
   return (
     <>
@@ -59,7 +62,7 @@ const Cart = () => {
           {/* "Total" formateado */}
           <p className="fs-3 fw-bold">Total: ${convertedAmount(total)}</p>
           {/* Botón deshabilitado si no hay ítems. */}
-          <Button variant="dark" disabled={pizzas.length === 0}>
+          <Button variant="dark" disabled={pizzas.length === 0 || !token}>
             Pagar
           </Button>
         </Container>

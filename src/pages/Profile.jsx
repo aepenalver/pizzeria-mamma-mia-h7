@@ -4,8 +4,13 @@ import Figure from "react-bootstrap/Figure";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import user1 from "../assets/img/user1.png";
+import { useUser } from "../context/UserContext";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
+  const { setToken } = useUser();
+  const navigate = useNavigate();
+
   return (
     <>
       <section className="d-flex justify-content-center align-items-center p-5">
@@ -31,8 +36,11 @@ const Profile = () => {
             </Col>
           </Form.Group>
           <Form.Group as={Row} className="mb-3">
-            <Col sm={{ span: 10, offset: 2 }}>
-              <Button variant="dark" type="submit">
+            <Col sm={{ span: 10, offset: 2 }} className="flex space-between">
+              <Button variant="dark" onClick={() => navigate("/")}>
+                🍕 Home
+              </Button>
+              <Button variant="dark" type="submit" onClick={() => setToken(false)}>
                 🔐 Cerrar sesión
               </Button>
             </Col>

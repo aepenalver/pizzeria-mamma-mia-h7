@@ -2,10 +2,13 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useCart } from "../context/CartContext";
 import convertedAmount from "../utils/convert";
+import { useNavigate } from "react-router-dom";
 
 const CardPizza = (props) => {
   // Desestructurar la función addToCart del contexto
   const { addToCart } = useCart();
+
+  const navigate = useNavigate();
 
   // Función que prepara el objeto de pizza y lo añade al carrito
   const handleAddToCart = () => {
@@ -18,6 +21,10 @@ const CardPizza = (props) => {
     };
     // Llama a la función del contexto para agregar la pizza al estado global.
     addToCart(pizzaToAdd);
+  };
+
+  const handleViewMore = () => {
+    navigate(`/pizza/${props.id}`);
   };
 
   return (
@@ -40,7 +47,9 @@ const CardPizza = (props) => {
         {/* Precio formateado */}
         <p className="fs-4 fw-bold pt-2 text-center">Precio: ${convertedAmount(props.price)}</p>
         <div className="btn-box d-flex justify-content-around">
-          <Button variant="outline-dark">Ver Más 👀</Button>
+          <Button variant="outline-dark" onClick={handleViewMore}>
+            Ver Más 👀
+          </Button>
           {/* Botón "Añadir": Llama a handleAddToCart, que usa la función del contexto */}
           <Button variant="dark" onClick={handleAddToCart}>
             Añadir 🛒

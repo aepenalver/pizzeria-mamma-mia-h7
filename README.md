@@ -15,13 +15,13 @@ Instrucciones para instalar y configurar el proyecto:
 1. Clonar repositorio:
 
 ```bash
-git clone https://github.com/aepenalver/pizzeria-mamma-mia-h6.git
+git clone https://github.com/aepenalver/pizzeria-mamma-mia-h7.git
 ```
 
 2. Acceder al directorio:
 
 ```bash
-cd pizzeria-mamma-mia-h6
+cd pizzeria-mamma-mia-h7
 ```
 
 3. Instalar las dependencias:
@@ -40,7 +40,7 @@ npm run dev
 
 ⚠️ En caso de no contar con el backend:
 
-1. Descargarlo desde el siguiente link "[Backend](https://we.tl/t-U8VXxVlqHg)"(Peso de archivo descargable: <span style="color: green">23 KB</span>). <span style="color: yellow">_Este link es de carácter temporal y estará disponible sólo hasta el_ <span style="color: red;">**15/10/2025**</span>_, luego de esta fecha se debe solicitar nuevo link para descarga_</span>.
+1. Descargarlo desde el siguiente link "[Backend](https://we.tl/t-0qeBJ2gyWt)"(Peso de archivo descargable: <span style="color: green">23 KB</span>). <span style="color: yellow">_Este link es de carácter temporal y estará disponible sólo hasta el_ <span style="color: red;">**22/10/2025**</span>_, luego de esta fecha se debe solicitar nuevo link para descarga_</span>.
 2. Descomprimir archivo descargado
 3. Abrir el directorio en terminal
 4. Instalar dependencias:

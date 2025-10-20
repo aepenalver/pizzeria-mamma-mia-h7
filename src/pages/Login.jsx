@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
+import { useUser } from "../context/UserContext";
 
 const Login = () => {
   // Estado para almacenar el valor del campo de email
@@ -10,10 +11,13 @@ const Login = () => {
   // Estado para almacenar el valor del campo de contraseña
   const [password, setPassword] = useState("");
 
+  const { setToken } = useUser();
+
   // Función que se ejecuta al enviar el formulario (onSubmit)
-  const validarInputs = (e) => {
+  const handleSubmit = (e) => {
     // Previene el comportamiento por defecto del formulario (recarga de página)
     e.preventDefault();
+    setToken({ email, password });
 
     // Validación de campos vacíos: Verifica si el email o la contraseña están vacíos
     if (!email.trim() || !password.trim()) {
@@ -43,7 +47,7 @@ const Login = () => {
 
   return (
     <section className="d-flex justify-content-center align-items-center p-5">
-      <Form className="w-50" onSubmit={validarInputs}>
+      <Form className="w-50" onSubmit={handleSubmit}>
         <h1 className="mb-5">Login</h1>
         <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
           <Form.Label column sm={2} className="fw-bold">

@@ -1,8 +1,10 @@
+import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import { useUser } from "../context/UserContext";
 import convertedAmount from "../utils/convert";
 
 const NavMenu = () => {
@@ -10,7 +12,8 @@ const NavMenu = () => {
   const { total } = useCart();
 
   // Variable autenticación
-  const token = false;
+  // const token = false;
+  const { token, setToken } = useUser();
 
   // Inicialización de hook para manejar la navegación
   const navigate = useNavigate();
@@ -19,7 +22,7 @@ const NavMenu = () => {
     <Navbar className="bg-dark">
       <Container fluid className="m-1 gap-2">
         {/* Logo y enlace a "home" */}
-        <Navbar.Brand as={Link} to="/" className="text-light fs-4 fw">
+        <Navbar.Brand as={NavLink} to="/" className="text-light fs-4 fw">
           Pizzería Mamma Mia!
         </Navbar.Brand>
 
@@ -33,7 +36,9 @@ const NavMenu = () => {
             <Button variant="outline-light" onClick={() => navigate("/profile")}>
               🔓 Profile
             </Button>
-            <Button variant="outline-light">🔒 Logout</Button>
+            <Button variant="outline-light" onClick={() => setToken(false)}>
+              🔒 Logout
+            </Button>
           </>
         ) : (
           <>
